@@ -21,8 +21,10 @@ curl -sSL https://raw.githubusercontent.com/changgecloud/kubernetes/main/docker_
 # 当然 KUBEAPI_IP 也可以是一个域名，如果是域名，需要在 /etc/hosts 设置解析
 # export 命令只在当前 shell 会话中有效，开启新的 shell 窗口后，如果要继续安装过程，请重新执行此处的 export 命令
 export KUBEAPI_IP=192.168.31.100
+
 # Kubernetes 容器组所在的网段，该网段安装完成后，由 kubernetes 创建，事先并不存在于您的物理网络中
 export POD_NETWORK_CIDR=10.244.0.0/16
+
 # Kubernetes service 所在的网段
 export SERVICE_CIDR=172.10.0.0/16
 
