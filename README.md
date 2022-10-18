@@ -13,6 +13,14 @@ export DOCKER_VERSION=20.10.18
 curl -sSL https://raw.githubusercontent.com/changgecloud/kubernetes/main/docker_kubernetes_v1.24.sh | sh -s 1.24.6
 ```
 ### 2. 初始化 master 节点
+在初始化 master 之前，我们需要在 kubernetes 集群所有节点的 /etc/hosts 文件中配置解析
+
+```
+cat >> /etc/hosts <<EOF
+192.168.31.100 kubeapi.org
+192.168.31.123 ubuntu2004
+EOF
+```
 
 ```
 # 只在 master 节点执行
