@@ -41,6 +41,11 @@ kubeadm reset --cri-socket unix:///run/cri-dockerd.sock
 
 ### 3. 初始化 work 节点
 
+```
+kubeadm join 192.168.31.100:6443 --token b8hev0.kcizwazm0it5ciof \
+	--discovery-token-ca-cert-hash sha256:19485e2268a941bdf5c4822554e734d7bc4780e3d4f34fb72102e3121871b9f6 \
+  --cri-socket unix:///run/cri-dockerd.sock
+```
 
 
 
