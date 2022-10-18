@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+
 
 systemctl enable kubelet.service
 
