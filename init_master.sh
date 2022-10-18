@@ -7,7 +7,7 @@ systemctl enable kubelet.service
 ###Step1. 实现 kubectl kubeadm 命令补全
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 echo "source <(kubeadm completion bash)" >> ~/.bashrc
-source ~/.bashrc
+sudo source ~/.bashrc
 
 
 ###Setp2. 提前下载集群所需镜像
