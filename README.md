@@ -41,6 +41,14 @@ kubeadm reset --cri-socket unix:///run/cri-dockerd.sock
 
 ### 3. 初始化 work 节点
 
+#### 获取 join 命令参数
+只在 master 节点上执行
+```
+kubeadm token create --print-join-command
+```
+
+可获取kubeadm join 命令及参数，如下所示
+--cri-socket 是必须要加的
 ```
 kubeadm join 192.168.31.100:6443 --token b8hev0.kcizwazm0it5ciof \
 	--discovery-token-ca-cert-hash sha256:19485e2268a941bdf5c4822554e734d7bc4780e3d4f34fb72102e3121871b9f6 \
