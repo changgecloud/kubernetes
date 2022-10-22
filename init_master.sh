@@ -1,13 +1,14 @@
 #!/bin/bash
 
-
-
 systemctl enable kubelet.service
 
 ###Step1. 实现 kubectl kubeadm 命令补全
-echo "source <(kubectl completion bash)" >> ~/.bashrc
-echo "source <(kubeadm completion bash)" >> ~/.bashrc
-sudo source ~/.bashrc
+cat > /etc/profile.d/kubectl_completion.sh <<EOF
+source <(kubectl completion bash)
+source <(kubeadm completion bash)
+source <(crictl completion bash)
+EOF
+source /etc/profile.d/kubectl_completion.sh
 
 
 ###Setp2. 提前下载集群所需镜像
