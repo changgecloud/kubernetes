@@ -83,7 +83,7 @@ dpkg -i cri-dockerd_0.2.6.3-0.ubuntu-$(lsb_release -cs)_amd64.deb
 
 ##Step8. 配置cri-dockerd
 sed -ri -e 's,^(ExecStart=.*),\1 --pod-infra-container-image registry.aliyuncs.com/google_containers/pause:3.7,' /lib/systemd/system/cri-docker.service
-systemctl daemon-reload && systemctl enable --now cri-docker.service
+systemctl daemon-reload && systemctl enable --now cri-docker.service && systemctl restart cri-docker.service
 
 kubelet --version
 docker --version
