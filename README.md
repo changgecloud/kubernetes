@@ -17,7 +17,7 @@ curl -sSL https://raw.githubusercontent.com/changgecloud/kubernetes/main/docker_
 
 ```
 cat >> /etc/hosts <<EOF
-192.168.31.100 kubeapi.org
+192.168.31.48 kubeapi.org
 192.168.31.49 kube-master01
 192.168.31.50 kube-master02
 192.168.31.51 kube-master03
