@@ -36,7 +36,7 @@ EOF
 export KUBEAPI_IP=192.168.31.100
 
 # Kubernetes 容器组所在的网段，该网段安装完成后，由 kubernetes 创建，事先并不存在于您的物理网络中
-export POD_NETWORK_CIDR=10.244.0.0/16
+export POD_NETWORK_CIDR=10.16.0.0/16
 
 # Kubernetes service 所在的网段
 export SERVICE_CIDR=172.10.0.0/16
